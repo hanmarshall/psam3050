@@ -1,16 +1,17 @@
-var didScroll = false;
+$( document ).ready(function() {
+		var didScroll = false;
 
-window.onscroll = doThisStuffOnScroll;
+	window.onscroll = doThisStuffOnScroll;
 
-function doThisStuffOnScroll() {
-    didScroll = true;
-    $("span").addClass("punctuation");
-}
+	function doThisStuffOnScroll() {
+	    didScroll = true;
+	    $("span").addClass("punctuation");
+	}
 
-setInterval(function() {
-    if(didScroll) {
-        didScroll = false;
-        $("span").removeClass("punctuation");
-    }
-}, 100);
-
+	setInterval(function() {
+	    if(didScroll) {
+	        didScroll = false;
+	        $("span").removeClass("punctuation");
+	    }
+	}, 100);
+});
