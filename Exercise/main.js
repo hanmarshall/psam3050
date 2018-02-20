@@ -1,8 +1,8 @@
 var didScroll = false;
 
-window.onscroll = changeColor;
+window.onscroll = doThisStuffOnScroll;
 
-function changeColor() {
+function doThisStuffOnScroll() {
     didScroll = true;
     $("span").addClass("punctuation");
 }
