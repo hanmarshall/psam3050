@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div class="description">
+  <h2>Demo: Using Media Queries to create alternate reading experiences</h2>
+
+  <p>Media queries are used to create responsive layouts, effecting specific elements in the browser only if a certain condition is true (most commonly, browser window width.)</p>
+
+  <p>Media queries can be used for more than just reformatting content or collapsing multiple column layouts into one when viewed on mobile. A website could present an entirely different viewing experience on mobile than on desktop, or use a different tone and voice. There can be situations where certain content is only able to be viewed on a specific screen size.</p>
+
+  <p>In the following demo, text is divided in 2 columns when viewed on desktop.</p>
+
+  <b>HTML</b>
+  <br>
+  <textarea rows="6" cols="50">
+    <div class="row">
+      <div class="column" id="column-1">
+        <p>TEXT</p>
+      </div>
+    </div>
+  </textarea>
+  <br>
+  <b>CSS</b>
+  <br>
+    <textarea rows="18" cols="50">
+      .column {
+        float: left;
+        width: 40%;
+        padding: 20px;
+      }
+
+      /* Clear floats after the columns */
+
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      img.mobile {
+        display: none;
+      }
+  </textarea>
+  <br>
+  <p>When the browser window resizes to less than 500 px, the columns stack on top of each other, images that were "display: none" appear, and the styling changes to create an experience that is more visually aligned with the subject when seen at a smaller size.</p>
+
+  <b>CSS</b>
+  <br>
+    <textarea rows="27" cols="50">
+      @media (max-width: 500px) {
+        .column {
+          width: 100%;
+      }
+
+      body { 
+        background-color: orange;
+        font-family: arial;
+        font-size: 25px;
+        color: green;
+      }
+
+      h3 {
+        color: yellow;
+      }
+
+      h2{
+        color: red;
+      }
+
+      img.mobile {
+        display: block;
+        width: 100%;
+        padding: 5%;
+      }
+    }
+  </textarea>
+  <h2>Demo content &#8595;</h2>
+  <hr>
+</div>
+
+<h2>Hummingbirds</h2>
+
+<div class="row">
+  <div class="column" id="column-1">
+    <p>Hummingbirds are birds from the Americas that constitute the family Trochilidae. They are among the smallest of birds, most species measuring 7.5–13 cm (3–5 in) in length.  <img class="mobile" src="assets/img6.jpg"> Indeed, the smallest extant bird species is a hummingbird, the 5 cm (2.0 in) bee hummingbird weighing less than 2.0 g (0.07 oz).
+    </p>
+
+    <p>
+    They are known as hummingbirds because of the humming sound created by their beating wings which flap at high frequencies audible to humans. They hover in mid-air at rapid wing-flapping rates,<img class="mobile" src="assets/img1.jpg"> which vary from around 12 beats per second in the largest species, to in excess of 80 in some of the smallest. <img class="mobile" src="assets/img3.jpg"> Of those species that have been measured in wind tunnels, their top speed exceeds 15 m/s (54 km/h; 34 mph) and some species can dive at speeds in excess of 22 m/s (79 km/h; 49 mph). <img class="mobile" src="assets/img10.jpg">
+    </p>
+
+    <p>
+    Hummingbirds have the highest metabolism of any homeothermic animal. To conserve energy when food is scarce, <img class="mobile" src="assets/img7.jpg"> and nightly when not foraging, they can go into torpor, a state similar to hibernation, slowing metabolic rate to 1/15th of its normal rate. <img class="mobile" src="assets/img2.jpg">
+    </p>
+
+    <p>
+    <h3>Vision</h3>
+    During evolution, hummingbirds have adapted to the navigational needs of visual processing while in rapid flight or hovering by development of an exceptionally dense array of retinal neurons <img class="mobile" src="assets/img4.jpg"> allowing for increased spatial resolution in the lateral and frontal visual fields. Morphological studies showed that neuronal hypertrophy, relatively the largest in any bird, exists in a brain region called the pretectal nucleus lentiformis mesencephali (or nucleus of the optic tract in mammals) responsible for refining dynamic visual processing while hovering and during rapid flight. <img class="mobile" src="assets/img6.jpg"> The enlargement of this brain region responsible for visual processing indicates enhanced ability for perception and processing of fast-moving visual stimuli which hummingbirds encounter during rapid forward flight, insect foraging, <img class="mobile" src="assets/img5.jpg"> competitive interactions, and high-speed courtship.
+    </p>
+
+    <p>
+    Hummingbirds are highly sensitive to stimuli in their visual fields, responding to even minimal motion in any direction by reorienting themselves in midflight. <img class="mobile" src="assets/img12.jpg"> Hummingbirds' visual sensitivity allows them to precisely hover in place while in complex and dynamic natural environments, functions enabled by the lentiform nucleus <img class="mobile" src="assets/img8.jpg"> which is tuned to fast-pattern velocities, enabling highly tuned control and collision avoidance during forward flight.
+    </p>
+
+    <p>
+    <h3>Metabolism</h3>
+    With the exception of insects, hummingbirds while in flight have the highest metabolism of all animals – a necessity to support the rapid beating of their wings during hovering and fast forward flight. Their heart rate can reach as high as 1,260 beats per minute, <img class="mobile" src="assets/img9.jpg">a rate once measured in a blue-throated hummingbird, with a breathing rate of 250 breaths per minute, even at rest. During flight, oxygen consumption per gram of muscle tissue in a hummingbird <img class="mobile" src="assets/img13.jpg"> is about 10 times higher than that measured in elite human athletes.
+    </p>
+
+    <p>
+    Hummingbirds are rare among vertebrates in their ability to rapidly make use of ingested sugars to fuel energetically expensive hovering flight, powering up to 100% of their metabolic needs with the sugars they drink <img class="mobile" src="assets/img14.jpg"> (in comparison, human athletes max out at around 30%). Hummingbirds can use newly ingested sugars to fuel hovering flight within 30–45 minutes of consumption. 
+    </p>
+  </p>
+  </div>
+
+  <div class="column" id="column-2">
+    <p>
+    These data suggest that hummingbirds are able to oxidize sugar in flight muscles at rates high enough to satisfy their extreme metabolic demands. <img class="mobile" src="assets/img15.jpg"> By relying on newly ingested sugars to fuel flight, hummingbirds can reserve their limited fat stores to sustain their overnight fasting or to power migratory flights.
+    </p>
+
+    <p>
+    Studies of hummingbirds' metabolisms are relevant to the question of how a migrating ruby-throated hummingbird can cross 800 km (500 mi) of the Gulf of Mexico on a nonstop flight. <img class="mobile" src="assets/img18.jpg"> This hummingbird, like other birds preparing to migrate, stores fat as a fuel reserve, thereby augmenting its weight by as much as 100%, hence increasing potential flying time over open water.
+    </p> 
+
+    <p> 
+    <h3>Kidney function</h3>
+    The dynamic range of metabolic rates in hummingbirds requires a parallel dynamic range in kidney function. During a day of nectar consumption with corresponding high water intake that may total five times the body weight per day, <img class="mobile" src="assets/img16.jpg"> hummingbird kidneys process water via glomerular filtration rates (GFR) in amounts proportional to water consumption, thereby avoiding overhydration. During brief periods of water deprivation, however, such as in nighttime torpor, GFR ceases, preserving body water.
+    </p>
+
+    <p>
+    Hummingbird kidneys also have a unique ability to control the levels of electrolytes after consuming nectars with high amounts of sodium and chloride or none, <img class="mobile" src="assets/img17.jpg"> indicating that kidney and glomerular structures must be highly specialized for variations in nectar mineral quality.  <img class="mobile" src="assets/img19.jpg">Morphological studies on Anna's hummingbird kidneys showed adaptations of high capillary density in close proximity to nephrons, allowing for precise regulation of water and electrolytes.
+    </p>
+
+    <p>
+    <h3>Torpor</h3>
+    The metabolism of hummingbirds can slow at night or at any time when food is not readily available: the birds enter a hibernation-like, deep-sleep state (known as torpor) to prevent energy reserves from falling to a critical level. <img class="mobile" src="assets/img23.jpg"> During night-time torpor, body temperature falls from 40 to 18 °C, with heart and breathing rates both slowed dramatically (heart rate to roughly 50 to 180 beats per minute from its daytime rate of higher than 1000).
+    </p>
+     <img class="mobile" src="assets/img22.jpg">
+    <p>
+    During torpor, to prevent dehydration, the GFR ceases, preserving needed compounds such as glucose, water, and nutrients. Further, body mass declines throughout nocturnal torpor at a rate of 0.04 g per hour, amounting to about 10% of weight loss each night.  <img class="mobile" src="assets/img21.jpg"> The circulating hormone, corticosterone, is one signal that arouses a hummingbird from torpor.
+    </p>
+
+    <p>
+    Use and duration of torpor vary among hummingbird species and are affected by whether a dominant bird defends territory, with nonterritorial subordinate birds having longer periods of torpor.
+    </p>
+    </p>
+  </div>
+</div>
+
+</body>
+</html>
