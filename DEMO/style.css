@@ -71,7 +71,12 @@ img.mobile {
       padding: 5%;
     }
 
-    .description {
+    /*.description {
       display: none;
+    }*/
+
+    .description {
+      width: 100%;
+      padding: 20px;
     }
 }
