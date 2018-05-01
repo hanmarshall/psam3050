@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background:#f7f7f7;
+}
+
+@font-face {
+    font-family: 'Sabon';
+    src: url('assets/fonts/SabonLTStd-Roman.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sabon Italic';
+    src: url('assets/fonts/SabonLTStd-Italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Authentic Sans';
+    src: url('assets/fonts/AUTHENTIC-Sans.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+#header {
+    width: 100vw;
+    font-family: "Authentic Sans";
+    font-size: 30px;
+    position: fixed;
+    padding: 14px 20px;
+    top: 0;
+    z-index: 2;
+    background: #f7f7f7;
+    text-rendering: optimizeLegibility;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+em {
+  font-family: 'Sabon Italic'
+}
+
+#home_nav span {
+    visibility: hidden;
+}
+
+
+#home_nav:hover {
+    cursor: pointer;
+}
+
+#title_article p {
+  padding: 65px 20px;
+  padding-bottom: 0;
+  font-family: "Authentic Sans";
+  font-size: 30px;
+  text-indent: 0;
+  color: #b9f4e2;
+}
+
+#title_flowers p {
+  padding: 65px 20px;
+  padding-bottom: 0;
+  font-family: "Authentic Sans";
+  font-size: 30px;
+  text-indent: 0;
+  color: #4d56ce;
+}
+
+#text {
+  width: 100vw;
+  padding: 10%;
+  padding-top: 5%;
+  /* accounting for scrollbar */
+  padding-left: calc(10% + 17px);
+  font-size: 34px;
+  line-height: 1.2em;
+  position: absolute;
+}
+
+
+p {
+  margin: 0;
+  padding: 0;
+  text-indent: 2.5em;
+  font-family: "Sabon";
+}
+
+p:first-of-type {
+  text-indent: 0;
+}
+
+/*FOR THE ROOM, TARZANA*/
+
+@media (max-height: 600px) {
+    body.room {
+        background-color: #b9f4e2;
+      }
+
+      .room #title_article p {
+        color: #f7f7f7;
+      }
+
+      .room #text p {
+        line-height: 7vh;
+      }
+
+      .room #text {
+        padding-bottom: 0;
+        padding-top: 0;
+      }
+}
+

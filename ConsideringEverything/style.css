@@ -1,0 +1,205 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  height:100%; width:100%;
+}
+
+@font-face {
+    font-family: 'Sabon';
+    src: url('assets/fonts/SabonLTStd-Roman.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sabon Italic';
+    src: url('assets/fonts/SabonLTStd-Italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Authentic Sans';
+    src: url('assets/fonts/AUTHENTIC-Sans.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*TOP*/
+
+#header {
+    width: 100vw;
+    font-family: "Authentic Sans";
+    font-size: 30px;
+    position: fixed;
+    padding: 14px 20px;
+    top: 0;
+    z-index: 2;
+    text-rendering: optimizeLegibility;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#title_nav span {
+    visibility: hidden;
+}
+
+
+#title_nav:hover {
+    cursor: pointer;
+}
+
+#home_nav span {
+    visibility: hidden;
+}
+
+
+#home_nav:hover {
+    cursor: pointer;
+}
+
+/*BOX CONTENT*/
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+span.line_indent {
+    margin-left: 18px;
+}
+
+span.linebreak {
+    margin-left: 20px;
+}
+
+
+#container  {
+    width: 90vw;
+    height: 100vh;
+    position: relative;
+    margin: 0 auto;
+}
+
+.current {
+    padding-top: 150px;
+    width: 100%;
+/*    height: 100%;
+*/}
+
+.box {
+    font-family: "Sabon";
+    width: 350px;
+    height: 350px;
+    background: #f7f7f7;
+    float: left;
+    margin: 10px;
+    overflow: scroll;
+/*    box-shadow: inset -7px -7px 30px 3px rgba(0, 0, 0, 0.18);*/
+}
+
+p {
+    padding: 12px 40px; 
+    font-size: 26px;
+}
+
+div#box1 p.title {
+    visibility: hidden;
+    position: absolute;
+}
+
+div#box2 p.title {
+    visibility: hidden;
+    position: absolute;
+}
+
+div#box3 p.title {
+    visibility: hidden;
+    position: absolute;
+}
+
+div#box2  p.textpreview {
+    padding: 12px 40px; 
+    font-size: 26px;
+}
+
+
+#box2 p {
+    font-size: 30px;
+}
+
+#box1:hover {
+    background-color: #8ca2e5;
+}
+
+#box2:hover {
+    background-color: #b9f4e2;
+
+}
+
+#box3:hover {
+    background-color: #d6aa8b;
+}
+
+
+em {
+    font-style: "Sabon Italic"
+}
+
+/*POETRY HALFSHEET LIGHTBOX*/
+
+.halfsheet {
+    width: 750px;
+    height: 1300px;
+    position: relative;
+    margin: 0 auto;
+    z-index: 56;
+    background-color: white;
+    margin-top: -75px;
+    display: none;
+}
+
+.halfsheet-title p {
+    font-family: "Authentic Sans";
+    font-size: 32px;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 5px;
+    color: #d6aa8b;
+}
+
+.halfsheet-text p {
+font-size: 32px;
+  line-height: 1.2em;
+  font-family: "Sabon";
+  margin-left: 40px;
+  margin-right: 20px;
+  margin-bottom: 100px;
+  padding-top: 175px;
+  position: absolute;
+  height: 1300px;
+}
+
+span.halfsheet-text {
+    position: absolute;
+}
+
+/*div.halfsheet {
+    display: none;
+}*/
+
+.backdrop-visible {
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100vw;
+    height:100vh;
+    background: #d6aa8b;
+    opacity: .8;
+    filter:alpha(opacity=.8);
+    z-index:55;
+    display:none;
+    left: 0;
+    top: 0;
+    position: fixed;
+}
