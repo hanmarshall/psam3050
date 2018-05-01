@@ -87,15 +87,12 @@ $(function(){
 
 
 function off() {
-
-  $('#backdrop, #cartas').animate({'opacity':'0'}, 100, 'linear', function(){
-            $('#backdrop, #cartas').animate({'opacity':'0'}, 100, 'linear');
+            
             document.getElementById("backdrop").style.display = "none";
             document.getElementById("cartas").style.display = "none";
 
           $('.box p').animate({'opacity':'1'}, 500, 'linear', function(){      
-    });  
-          
+            
 });
 
 }
